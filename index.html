@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Septa Regional Fare Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" 
+</head>
+
+<body>
+
+<section>  <!-- main container for fare widget -->
+
+<div class="main-container">
+    <header class="main-container-header">
+        <div class="wrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/SEPTA.svg/500px-SEPTA.svg.png" alt="Septa Logo" />
+            <h1>Regional Rail Fares</h1>
+        </div>  
+    </header>
+        <!-- Form -->
+        <form id="widget-fare-form">           
+            <legend class="fieldset">Calculate the cost of your ride</legend>
+            <!-- Zone -->
+            <div class="widget-fare-calculate widget-fare-calculate--dropdown"> 
+            <label class="widget-fare--question" for="widget-form-zone-questions"> Where are you going?</label>
+            <select class="widget-fare-field" id="widget-fare-zone" required="required" aria-required="true">
+            <option value="1"> CCP/1 </option>
+            <option value="2"> Zone 2 </option>
+            <option value="3"> Zone 3 </option>
+            <option value="4"> Zone 4 </option>
+            <option value="5">  NJ </option>
+            </select>
+        </div>
+
+        <!-- Time -->
+
+        <div class="widget-fare-calculate widget-fare-calculate--dropdown">
+            <label class="widget-fare--question" for="widget-form-time-questions">
+                When are you riding?</label>
+                <!-- <select class="widget-form-fields" id="widget-fare-times" required="required" aria-required="true"> -->
+            <select class="widget-form-field">
+            <option value="anytime">Anytime</option>
+            <option value="weekday">Weekday</option>
+            <option value="evening_weekend">Evening or Weekend</option>
+            </select>
+            <span class="helper-text" id="widget-fare-anytime">10-Trip advance purchase </span>
+            <span class="helper-text" id="widget-fare-time">Conditions may apply!</span>
+         </div>
+
+        <!-- Q3-->
+
+        <div class="widget-fare-calculate widget-fare-calculate--radio">
+            <fieldset>
+                <legend class="widget-fare--question"> Where will you purchase your ticket?</legend>
+                <p>
+                    <input class="widget-form-field" type="radio" name="purchase_location" value="purchase_onboard" id="widget-fare-onboard" checked="checked" required="required" aria-describedby="purchase_onboard" aria-required="true"/>
+                    <label for="purchase_onboard">Onboard</label>
+                </p>
+                <p>
+                    <input class="widget-form-field" type="radio" name="purchase_location" value="purchase_kiosk" id="widget-fare-kiosk" checked="checked" required="required" aria-describedby="purchase_station_kiosk" aria-required="true"/>
+                    <label for="purchase_station_kiosk"> Station Kiosk </label>
+                </p>
+            </fieldset>
+
+        </div>
+   
+        <!-- Q4 -->
+        
+        <div class="widget-fare-calculate widget-fare-calculate--textbox">
+                <label class="widget-fare--question" for="widget-fare-trips"> How many rides do you need? </label>
+                <!-- NEEDS ID -->
+                <input class="widget-fare-field" id="widget-fare-trips" type="number" name="quantity" value="1" min="1" max="10" required="required" aria-required="true" >
+        </div>
+
+        </form> <!-- end Form  -->  
+         
+        <!-- calculates cost of the fare-->
+        <footer class="footer">
+
+            <p class="widget-fare-text--total">
+                Your fare will cost
+                <span id="total"> $ </span>
+            </p>
+                <div id="result"></div>
+        </footer>
+    </div> <!-- end main container -->
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+</section><!-- end widget section added for semantic HTML so the widget can be dropped into another page, program or component -->
+
+</body>
+</html>

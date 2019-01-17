@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400, 700');
+
+/* 
+As a beginner, I do not have much experience using the '@media rule' to select/target and apply styles for different devices and viewport widths. Rather than guessing, I left the @media rules out of this code challenge
+*/
+
+}
+@viewport {
+  width: device-width;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/*style of the widget container */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  padding: 1.0em;
+}
+fieldset {
+  border: 0;
+  padding: 0.1em 0 0 0;
+  margin: 0.1em;
+  min-width: 0;
+}
+
+/* commented out the field set because the styles seem to be over-ridden by another style and I could not resolve. 
+
+.fieldset-caption {
+  position: absolute;
+  width: 100px;
+  height: 115px;
+  padding: 0;
+  margin: 0px;
+  border: 0;
+} */
+.main-container {
+  background: #ffff;
+  border: 2px solid #cccc;
+  color: #585656;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  max-width: 640px;
+  text-align: center;
+  width: 100%;
+}
+
+.main-container-header {
+  background: #585656;
+  color: #fff;
+  padding: 20px 0 30px;
+}
+
+/* 
+changed font measurement from pixels to em for best practice and responsive-first 
+*/
+
+.main-container-header h1 {
+  display: inline-block;
+  /* size 36 font */
+  font-size: 2em;
+  margin: 0;
+
+}
+
+.main-container-header img {
+  display: inline-block;
+  height: 100%;
+  margin-bottom: -5px;
+  margin-right: 5px;
+  max-height: 33px;
+  width: auto;
+}
+
+.main-container-header .wrapper {
+  height: 33px;
+  width: 100%;
+}
+
+.widget-fare--question {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.helper-text {
+  display: block;
+  /* font size 14px */
+  font-size: 0.8em;
+  margin-top: 15px;
+}
+
+.widget-fare-text--total {
+  font-weight: 700;
+}
+
+.widget-fare-text--total span {
+  display: block;
+  /* font size 48px */
+  font-size: 3em;
+}
+
+.widget-fare-calculate--dropdown select {
+  /* https://css-tricks.com/almanac/properties/a/appearance/ */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  width: 275px;
+  background-image: linear-gradient(125deg, #585656 50%, transparent 50%), linear-gradient(55deg, transparent 50%, #585656 50%);
+  background-position: calc(100% - 13px) 1.5em, calc(100% - 20px) 1.5em;
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+}
+
+.widget-fare-calculate--radio legend {
+  width: 100%;
+}
+
+.widget-fare-calculate--radio p {
+  margin: 0 auto;
+  text-align: left;
+  width: 125px;
+}
+
+.widget-fare-calculate--textbox input {
+  border: 1px solid #cccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  width: 100px;
+}
+
+.footer {
+  background:#585656;
+  color: #ffff;
+  padding: 20px;
+}
